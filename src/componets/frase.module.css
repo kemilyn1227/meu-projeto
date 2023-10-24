@@ -1,0 +1,17 @@
+.FraseContainer{
+    background-color: #333;
+    border: 1px solid #111;
+}
+
+.FraseContent{
+    color: #fff;
+    background-color: #333;
+    margin: 0;
+}
+
+.Azul{
+    background-color: aqua;
+    color: blue;
+}
+
+/*separar sempre com CamelCased*/
