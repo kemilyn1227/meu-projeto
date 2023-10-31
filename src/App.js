@@ -7,6 +7,11 @@ import SayMyName from './componets/SayMyName'
 
 import List from './componets/list'
 
+import Evento from './componets/Eventos'
+
+import Form from './componets/Form'
+
+import Condicional from './componets/Condicional'
 
 
 //elemento completo dentro da funçao app
@@ -49,7 +54,7 @@ function App() {
       <p>olá, {newname}</p>
       <p>soma: {soma(1,1)}</p>
       <p>o número é dois ? {édois()}</p>
-  <img src={url} alt="" />*/}
+  <img src={url} alt="" 
 
      <h1>testando o css</h1>
 
@@ -57,7 +62,12 @@ function App() {
       <HelloWorld />
       <SayMyName nome='kemilyn'/>
       <SayMyName nome ={name}/>
-      <List/>
+      <List/>*/}
+
+      <h1>testando eventos</h1>
+      <Evento numero = {1}/>
+      <Form/>
+      <Condicional/>
      
       
     </div>
