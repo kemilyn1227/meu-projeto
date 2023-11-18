@@ -16,7 +16,7 @@ function Condicional(){
 
     return(
         <div>
-            <br />
+            
             <h2>cadastre o seu email</h2>
             <form>
                 <input type="email" placeholder='digite seu email' onChange={(e)=> setEmail(e.target.value)} />

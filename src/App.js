@@ -1,77 +1,38 @@
+import{BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 
-import './App.css';
+import Home from './pages/Home'
 
-import HelloWorld from './componets/HelloWorld';
+import Empresa from './pages/empresa'
 
-import SayMyName from './componets/SayMyName'
+import Contato from './pages/Contato'
 
-import List from './componets/list'
+import NavBar from './componets/Layout/NavBar'
 
-import Evento from './componets/Eventos'
-
-import Form from './componets/Form'
-
-import Condicional from './componets/Condicional'
-
-
-//elemento completo dentro da funçao app
+import Footer from './componets/Layout/Footer'
 
 function App() {
-
-  {/* const name = 'matheus '
-
-  const newname = name.toUpperCase()
-
-  const num = 2
-
-  const url ='https://via.placeholder.com/150'
-
-  function soma(a,b){
-    return a +b
-  }
-
-  function édois(){
-    if(num === 2){
-      return 'é dois'
-    }else{
-      return 'nao é dois'
-    }
-
-  }*/}
-
-  const name = 'maria'
 
   
   return (
 
-    //precisa retornar apenas 1 elemento pai neste caso a div
+      <Router> {/* abrir links diferentes ssem o reload*/}
+      
+      <NavBar/>
+    {/*exact precisa ser exatamente como esta escrito*/}
 
-    //quando se for adicionar uma classe utilizar className pois class é uma palavra reservado do react
+   <Routes>
+    <Route  exact path='/' element= {<Home/>}></Route>
 
-    <div className="App">
+    <Route  exact path='/contatoteste' element = {<Contato/>}></Route>
 
-      {/*   <h2>alterando jsx</h2>
-      <p>olá, {newname}</p>
-      <p>soma: {soma(1,1)}</p>
-      <p>o número é dois ? {édois()}</p>
-  <img src={url} alt="" 
-
-     <h1>testando o css</h1>
+    <Route  exact path='/empresa' element = {<Empresa/>}></Route>
 
     
-      <HelloWorld />
-      <SayMyName nome='kemilyn'/>
-      <SayMyName nome ={name}/>
-      <List/>*/}
 
-      <h1>testando eventos</h1>
-      <Evento numero = {1}/>
-      <Form/>
-      <Condicional/>
-     
-      
-    </div>
-  );
+   </Routes>
+   <Footer/>
+    </Router>
+  )
   }
 
 export default App;
